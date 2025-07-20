@@ -1,6 +1,5 @@
 ---
-layout: default
-permalink: /
+layout: home
 ---
 
 {% include landing.html %}

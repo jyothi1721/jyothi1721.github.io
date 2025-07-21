@@ -95,6 +95,8 @@ defaults:
 
 ### Exclude from processing ###
 exclude:
+  - vendor
+  - node_modules
   - README.md
   - CONTRIBUTING.md
   - LICENSE

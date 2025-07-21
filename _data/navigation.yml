@@ -4,3 +4,7 @@
   url: /about/
 - title: Projects
   url: /projects/
+- title: Blog
+  url: /posts
+- title: Contact
+  url: /contact

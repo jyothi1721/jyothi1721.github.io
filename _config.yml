@@ -10,13 +10,15 @@ open_new_tab        : false                    # Opens external URLs in new tab 
 ### Plugins ###
 plugins:
   - jemoji
+  - jekyll-remote-theme
+
 
 
 ### Navbar Settings ###
 # nav_exclude:                                            # The following paths are excluded from navbar
-  - pages/tags.html
-  - pages/404.html
-  - pages/index.md
+#  - pages/tags.html
+#  - pages/404.html
+#  - pages/index.md
 
 
 ### Author Info ###

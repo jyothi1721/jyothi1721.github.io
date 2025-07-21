@@ -2,4 +2,4 @@
 layout: home
 ---
 
-#{% include landing.html %}
+{% include landing.html %}

@@ -1,4 +1,16 @@
 <style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
   .landing-collage {
     display: flex;
     width: 100vw;
@@ -7,27 +19,30 @@
   }
 
   .landing-collage .image-box {
-    flex: 1;
+    width: 33.3333vw; /* exactly one-third of screen width */
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
-    padding: 0.5em;
-    box-sizing: border-box;
+    align-items: center;
   }
 
   .landing-collage .image-box img {
     width: 100%;
-    height: 85vh; /* reduced height to allow room for caption */
+    height: 85vh; /* slightly smaller than full height for caption space */
     object-fit: cover;
-    border-radius: 8px;
+    display: block;
   }
 
   .landing-collage .caption {
-    margin-top: 0.5em;
-    text-align: center;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.2em;
     color: #333;
+    width: 100%;
+    text-align: center;
   }
 
   @media (max-width: 768px) {
@@ -36,13 +51,20 @@
       height: auto;
     }
 
-    .landing-collage .image-box img {
+    .landing-collage .image-box {
+      width: 100vw;
       height: auto;
-      aspect-ratio: 16 / 9; /* forces a landscape shape */
     }
 
-    .landing-collage .image-box {
+    .landing-collage .image-box img {
       width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+
+    .landing-collage .caption {
+      height: auto;
+      padding: 0.5em;
     }
   }
 </style>

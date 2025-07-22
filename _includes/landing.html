@@ -7,8 +7,8 @@
 
   html, body {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* hide horizontal scrollbar */
+    min-height: 100%;
+    overflow-x: hidden; /* no horizontal scroll */
     font-family: sans-serif;
   }
 
@@ -16,24 +16,25 @@
     display: flex;
     width: 100%;
     height: 100vh;
-    overflow: hidden; /* remove scroll from image container only */
+    overflow: hidden; /* prevent vertical scroll inside image section */
   }
 
   .landing-collage .image-box {
-    flex: 1; /* each takes equal width */
+    flex: 1;
     display: flex;
     flex-direction: column;
+    overflow: hidden; /* stop individual image scrolls */
   }
 
   .landing-collage .image-box img {
-    height: 85vh;  /* image takes up 85% of viewport height */
+    height: 85vh;
     width: 100%;
     object-fit: cover;
     display: block;
   }
 
   .landing-collage .caption {
-    height: 15vh; /* caption takes remaining 15% */
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: center;

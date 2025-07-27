@@ -1,11 +1,16 @@
 - title: Home
   url: /
+  weight: 1
 - title: About
   url: /about/
+  weight: 2
 - title: Projects
   url: /projects/
+  weight: 3
 - title: Blog
   url: /posts
+  weight: 4
 - title: Contact
   url: /#contact
+  weight: 5
 

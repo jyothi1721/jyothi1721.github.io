@@ -1,17 +1,16 @@
-  - category: "🧠 Languages"
+- category: "🧠 Languages"
   items:
     - Python
     - R
     - Bash
-    - HTML
-    - CSS
-    - JavaScript
+    - C
+    - JAVA
+    - MySQL
 
 - category: "🛠️ Tools & Platforms"
   items:
     - Git
-    - Docker
     - Conda
     - Linux
     - Jupyter
-    - Snakemake
+  

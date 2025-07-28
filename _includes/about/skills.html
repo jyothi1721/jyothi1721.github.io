@@ -1,17 +1,8 @@
-<div class="row skills-section">
-  {% assign half = include.source | size | divided_by: 2 | ceil %}
-
-  <div class="col-md-6">
-    {% for section in include.source limit: half %}
-      <p><strong>{{ section.category }}</strong><br>
-      {{ section.items | join: ", " }}</p>
-    {% endfor %}
+{% if include.source %}
+  <div class="row skills-section">
+    {% assign half = include.source | size | divided_by: 2 | ceil %}
+    ...
   </div>
-
-  <div class="col-md-6">
-    {% for section in include.source offset: half %}
-      <p><strong>{{ section.category }}</strong><br>
-      {{ section.items | join: ", " }}</p>
-    {% endfor %}
-  </div>
-</div>
+{% else %}
+  <p><strong>Skills data not loaded</strong></p>
+{% endif %}

@@ -1,7 +1,30 @@
-- name: Adobe Photoshop
-  percentage: 95
-  color: info
+- category: "🧬 Bioinformatics"
+  items:
+    - FastQC
+    - MultiQC
+    - STAR
+    - HISAT2
+    - DESeq2
+    - edgeR
+    - EnrichR
 
-- name: Adobe Illustrator
-  percentage: 90
-  color: success
+- category: "📊 Visualization"
+  items:
+    - ggplot2
+    - Seaborn
+    - Plotly
+    - Matplotlib
+
+- category: "📦 Packages & Libraries"
+  items:
+    - Pandas
+    - Biopython
+    - Numpy
+    - Tidyverse
+
+- category: "🌐 Web & Others"
+  items:
+    - Hugo
+    - Jekyll
+    - Netlify
+    - GitHub Pages

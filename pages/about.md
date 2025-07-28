@@ -16,8 +16,10 @@ My curiosity for biomedical data science has led me to projects involving pangen
 
 
 <div class="row">
-{% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
-{% include about/skills.html title="Other Skills" source=site.data.other-skills %}
+## 🧠 Programming Skills
+{% include skills.html title="Programming Skills" source=site.data.programming %}
+## 🔬 Domain Tools / Bioinformatics
+{% include skills.html title="Domain Tools & Libraries" source=site.data.non-programming %}
 </div>
 
 <div class="row">

@@ -1,29 +1,21 @@
-<div class="col-lg">
+<div class="skills-section">
+  <h2 class="mb-4">{{ include.title }}</h2>
 
-  <h2 class="mb-3">{{ include.title }}</h2>
+  <p><strong>🧠 Languages</strong><br>
+  Python, R, Bash, HTML, CSS, JavaScript</p>
 
-  {% for skill in include.source %}
+  <p><strong>🛠️ Tools & Platforms</strong><br>
+  Git, Docker, Conda, Linux, Jupyter, Snakemake</p>
 
-  <div class="row justify-content-between align-items-center">
-    <div class="col-10">
-      <p class="mb-1">{{ skill.name }}</p>
-    </div>
-    <div class="col-2 text-right">
-      <p class="mb-1 text-muted">{{ skill.percentage }}%</p>
-    </div>
-  </div>
+  <p><strong>🧬 Bioinformatics</strong><br>
+  FastQC, MultiQC, STAR, HISAT2, DESeq2, edgeR, EnrichR</p>
 
-  <div class="progress mb-4 bg-themed" style="height: 8px;">
-    <div class="progress-bar bg-{{ skill.color | default: "primary" }} wow animated slideInLeft"
-      data-wow-delay="{{ forloop.index | divided_by: 20.0 }}"
-      role="progressbar"
-      style="width: {{ skill.percentage }}%;"
-      aria-valuenow="{{ skill.percentage }}"
-      aria-valuemin="0"
-      aria-valuemax="100">
-    </div>
-  </div>
+  <p><strong>📊 Visualization</strong><br>
+  ggplot2, Seaborn, Plotly, Matplotlib</p>
 
-  {% endfor %}
+  <p><strong>📦 Packages & Libraries</strong><br>
+  Pandas, Biopython, Numpy, Tidyverse</p>
 
+  <p><strong>🌐 Web & Others</strong><br>
+  Hugo, Jekyll, Netlify, GitHub Pages</p>
 </div>

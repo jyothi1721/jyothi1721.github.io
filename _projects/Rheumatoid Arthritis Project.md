@@ -25,7 +25,7 @@ In this project:
 - Batch effect correction was applied
 - Enrichment analysis (Gene Ontology & KEGG Pathway) was performed to identify key pathways
 - Volcano plots and heatmaps were generated for data visualization
-- 
+
 ---
 
 ## 🛠 Tools & Methods
@@ -46,44 +46,17 @@ In this project:
 ## 📊 Results
 
 ### 🔹 PCA Plot
-Principal Component Analysis shows clear separation between RA and control samples, indicating transcriptomic differences.
 
 
 ---
 
 ### 🔹 Volcano Plot
-The volcano plot highlights significantly upregulated (red) and downregulated (blue) genes in RA samples:
 
 
 ---
 
 ### 🔹 Top Differentially Expressed Genes
 
-| Gene Symbol | log2FC | p-value  | adj. p-value |
-|-------------|--------|----------|---------------|
-| IL6         | 2.45   | 1.2e-10  | 3.5e-08        |
-| TNF         | 2.12   | 2.4e-09  | 6.7e-07        |
-| CCL2        | 1.89   | 3.1e-08  | 9.3e-06        |
-
 ---
-
-### 🔹 GO Enrichment
-
-Significantly enriched GO terms among DEGs:
-
-- **Biological Process**:
-  - Inflammatory response
-  - Cytokine-mediated signaling
-- **Molecular Function**:
-  - Chemokine activity
-  - Cytokine receptor binding
-
----
-
-## 📁 Next Steps
-
-- Integrate additional RA datasets to validate findings
-- Perform cell-type deconvolution
-- Explore therapeutic gene targets using public databases
 
 ---

@@ -1,11 +1,17 @@
-- name: HTML5/CSS3
-  percentage: 90
-  color: danger
+  - category: "🧠 Languages"
+  items:
+    - Python
+    - R
+    - Bash
+    - HTML
+    - CSS
+    - JavaScript
 
-- name: Go
-  percentage: 80
-  color:
-
-- name: Python
-  percentage: 70
-  color: secondary
+- category: "🛠️ Tools & Platforms"
+  items:
+    - Git
+    - Docker
+    - Conda
+    - Linux
+    - Jupyter
+    - Snakemake

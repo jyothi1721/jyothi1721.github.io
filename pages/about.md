@@ -7,7 +7,7 @@ weight: 3
 
 # **About Me**
 
-Hi, I am **{{ site.author.name }}!:wave:**  
+Hi, I am **{{ site.author.name }}!**  
 Welcome to my personal website! I'm a bioinformatics researcher passionate about exploring the molecular underpinnings of human diseases through computational biology. My work focuses on transcriptomics and genomics, with a strong interest in host-microbiome interactions, autoimmune disorders, and infectious diseases. 
 
 ---

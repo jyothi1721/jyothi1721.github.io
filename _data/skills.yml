@@ -1,4 +1,20 @@
-- category: "🧬 Bioinformatics"
+- category: "🧠 Languages"
+  items:
+    - Python
+    - R
+    - Bash
+    - C
+    - JAVA
+    - MySQL
+
+- category: "🛠️ Tools & Platforms"
+  items:
+    - Git
+    - Conda
+    - Linux
+    - Jupyter
+
+- category: "🧬 Bioinformatics" 
   items:
     - FastQC
     - MultiQC
@@ -6,7 +22,6 @@
     - HISAT2
     - DESeq2
     - edgeR
-    - EnrichR
 
 - category: "📊 Visualization"
   items:
@@ -24,7 +39,6 @@
 
 - category: "🌐 Web & Others"
   items:
-    - Hugo
     - Jekyll
     - Netlify
     - GitHub Pages

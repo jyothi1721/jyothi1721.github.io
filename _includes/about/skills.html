@@ -1,21 +1,8 @@
 <div class="skills-section">
   <h2 class="mb-4">{{ include.title }}</h2>
 
-  <p><strong>🧠 Languages</strong><br>
-  Python, R, Bash, HTML, CSS, JavaScript</p>
-
-  <p><strong>🛠️ Tools & Platforms</strong><br>
-  Git, Docker, Conda, Linux, Jupyter, Snakemake</p>
-
-  <p><strong>🧬 Bioinformatics</strong><br>
-  FastQC, MultiQC, STAR, HISAT2, DESeq2, edgeR, EnrichR</p>
-
-  <p><strong>📊 Visualization</strong><br>
-  ggplot2, Seaborn, Plotly, Matplotlib</p>
-
-  <p><strong>📦 Packages & Libraries</strong><br>
-  Pandas, Biopython, Numpy, Tidyverse</p>
-
-  <p><strong>🌐 Web & Others</strong><br>
-  Hugo, Jekyll, Netlify, GitHub Pages</p>
+  {% for section in include.source %}
+    <p><strong>{{ section.category }}</strong><br>
+    {{ section.items | join: ', ' }}</p>
+  {% endfor %}
 </div>

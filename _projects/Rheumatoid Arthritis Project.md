@@ -45,18 +45,17 @@ In this project:
 
 ## 📊 Results
 
-### 🔹 PCA Plot
+#### 🔹 PCA Plot
 
 
 ---
 
-### 🔹 Volcano Plot
+#### 🔹 Volcano Plot
 
 
 ---
 
-### 🔹 Top Differentially Expressed Genes
+#### 🔹 Top Differentially Expressed Genes
 
----
 
 ---

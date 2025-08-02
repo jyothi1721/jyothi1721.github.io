@@ -1,10 +1,10 @@
 <style>
   .landing-collage {
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
+    width: 100%;
+    margin-top: 2rem;
     gap: 0;
-    margin-top: 3rem;
   }
 
   .landing-collage .image-box {
@@ -12,7 +12,6 @@
     min-width: 33.33%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
   }
 
   .landing-collage .image-box img {
@@ -20,7 +19,6 @@
     height: auto;
     aspect-ratio: 3 / 2;
     object-fit: cover;
-    display: block;
     transition: transform 0.3s ease;
   }
 
@@ -40,13 +38,8 @@
     .landing-collage {
       flex-direction: column;
     }
-
     .landing-collage .image-box {
       width: 100%;
-    }
-
-    .landing-collage .image-box img {
-      aspect-ratio: 16 / 9;
     }
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 title: Home
 permalink: /
 ---
@@ -7,37 +7,21 @@ permalink: /
 <!-- Hero Section -->
 <section class="text-center py-5 bg-light">
   <h1>Hi, I'm Jyothi Guruprasad</h1>
-  <div>
-    <a href="/projects/" class="btn btn-primary btn-lg mr-2">View Projects</a>
-    <a href="/contact/" class="btn btn-outline-secondary btn-lg">Contact Me</a>
-  </div>
+  <p class="lead">Welcome to my personal site!</p>
+  <a href="/projects/" class="btn btn-primary btn-lg mx-2">View Projects</a>
+  <a href="/contact/" class="btn btn-outline-secondary btn-lg mx-2">Contact Me</a>
 </section>
 
 <!-- About Me Section -->
-<section class="container text-center my-5">
-  <h2>About Me</h2>
-  <p class="mt-3 mx-auto" style="max-width: 800px;">
-    I'm a passionate Bioinformatics Analyst who thrives at the intersection of data and biology...
-  </p>
+<section class="text-center py-5 bg-white">
+  <div class="container">
+    <h2>About Me</h2>
+    <p class="mt-3 mx-auto" style="max-width: 800px;">
+      I'm a passionate Bioinformatics Analyst who thrives at the intersection of data and biology. I enjoy transforming complex biological questions into meaningful insights using computational tools.
+    </p>
+    <a href="/about/" class="btn btn-link mt-2">Read More →</a>
+  </div>
 </section>
 
-<!-- Image Collage Section -->
+<!-- Image Collage -->
 {% include landing.html %}
-
-<!-- Fix scroll/visibility issues -->
-<style>
-  html, body {
-    min-height: 100%;
-    overflow-y: auto !important;
-    overflow-x: hidden;
-  }
-
-  .landing-collage {
-    height: auto !important;
-    margin-top: 2rem;
-  }
-
-  section {
-    display: block;
-  }
-</style>

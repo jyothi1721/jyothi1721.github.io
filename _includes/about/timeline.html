@@ -1,15 +1,42 @@
-<div class="timeline-step-container">
-  <ol class="timeline-stepper">
-    {% for step in site.data.timeline %}
-      <li class="timeline-step {% if forloop.last %}last-step{% endif %}">
-        <div class="step-marker"></div>
-        <div class="step-content">
-          <div class="step-year">{{ step.year }}</div>
-          <h4 class="step-title">{{ step.title }}</h4>
-          <div class="step-company">{{ step.company }}</div>
-          <p class="step-description">{{ step.description }}</p>
+<div class="winding-timeline">
+
+  {% assign steps = site.data.timeline %}
+  {% assign steps_per_row = 3 %}
+  {% assign total_steps = steps | size %}
+  {% assign row_count = total_steps | divided_by: steps_per_row | ceil %}
+
+  {% for row_index in (0..row_count-1) %}
+    <div class="timeline-row {% if forloop.last %}last-row{% endif %} {% if row_index | modulo: 2 == 1 %}reverse-row{% endif %}">
+      {% assign start = row_index | times: steps_per_row %}
+      {% assign end = start | plus: steps_per_row | minus: 1 %}
+      {% if end > total_steps %}
+        {% assign end = total_steps | minus: 1 %}
+      {% endif %}
+
+      {% for i in (start..end) %}
+        {% assign step = steps[i] %}
+        <div class="timeline-step">
+          <div class="step-circle">
+            {% if step.from and step.to %}
+              {{ step.from }} - {{ step.to }}
+            {% elsif step.from %}
+              {{ step.from }}
+            {% endif %}
+          </div>
+          <div class="step-info">
+            {% if step.degree %}
+              <h4>{{ step.degree }}</h4>
+            {% elsif step.role %}
+              <h4>{{ step.role }}</h4>
+            {% endif %}
+            <div class="institution-location">
+              {{ step.institution }}, {{ step.location }}
+            </div>
+            <p>{{ step.description }}</p>
+          </div>
         </div>
-      </li>
-    {% endfor %}
-  </ol>
+      {% endfor %}
+    </div>
+  {% endfor %}
+
 </div>

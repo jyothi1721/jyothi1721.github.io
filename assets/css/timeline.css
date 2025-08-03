@@ -1,25 +1,76 @@
-.timeline {
-  position: relative;
-  margin: 2rem 0;
-  padding-left: 2rem;
-  border-left: 3px solid #dee2e6;
+.timeline-step-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-.timeline-item {
+.timeline-stepper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  margin-bottom: 2rem;
-  padding-left: 1.5rem;
+
+  /* Line connecting steps */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 5%;
+    width: 90%;
+    height: 4px;
+    background-color: #ccc;
+    z-index: 0;
+  }
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -1.15rem;
-  width: 1rem;
-  height: 1rem;
-  background-color: #0d6efd; /* Bootstrap primary */
-  border-radius: 50%;
-  border: 2px solid white;
-  box-shadow: 0 0 0 2px #0d6efd;
+.timeline-step {
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  &:not(.last-step) {
+    margin-right: 1rem;
+  }
+
+  .step-marker {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 50%;
+    margin: 0 auto 0.5rem auto;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+
+  .step-content {
+    max-width: 150px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .step-year {
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 0.2rem;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .step-company {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+    color: #666;
+  }
 }

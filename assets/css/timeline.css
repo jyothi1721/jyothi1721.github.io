@@ -1,76 +1,103 @@
-.timeline-step-container {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
+.winding-timeline {
+  max-width: 800px;
+  margin: 3rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-.timeline-stepper {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  /* Line connecting steps */
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 5%;
-    width: 90%;
-    height: 4px;
-    background-color: #ccc;
-    z-index: 0;
-  }
-}
-
-.timeline-step {
-  position: relative;
-  text-align: center;
-  width: 100%;
-
-  &:not(.last-step) {
-    margin-right: 1rem;
-  }
-
-  .step-marker {
-    width: 40px;
-    height: 40px;
-    background-color: #3498db;
-    border-radius: 50%;
-    margin: 0 auto 0.5rem auto;
+  .timeline-row {
+    display: flex;
+    justify-content: space-between;
     position: relative;
-    z-index: 1;
-    transition: background-color 0.3s ease;
+    margin-bottom: 5rem;
+
+    &.reverse-row {
+      flex-direction: row-reverse;
+    }
+
+    /* Horizontal road line */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 30px; /* center with circle (50px height) */
+      left: 0;
+      right: 0;
+      height: 8px;
+      background: #ccc;
+      border-radius: 4px;
+      z-index: 0;
+    }
+
+    /* Curved connectors between rows */
+    & + .timeline-row::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      width: 80px;
+      height: 40px;
+      background: transparent;
+      z-index: 0;
+      border: 8px solid #ccc;
+      border-color: #ccc transparent transparent #ccc;
+      border-radius: 40px 0 0 0;
+    }
+
+    &.reverse-row + .timeline-row::after {
+      left: auto;
+      right: 0;
+      border-color: #ccc #ccc transparent transparent;
+      border-radius: 0 40px 0 0;
+    }
   }
 
-  .step-content {
-    max-width: 150px;
-    margin: 0 auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  .timeline-step {
+    position: relative;
+    z-index: 10;
+    width: 30%;
+    text-align: center;
 
-  .step-year {
-    font-weight: bold;
-    color: #3498db;
-    margin-bottom: 0.2rem;
-  }
+    .step-circle {
+      width: 50px;
+      height: 50px;
+      background-color: #2c3e50; /* classic blue-gray */
+      border-radius: 50%;
+      color: white;
+      line-height: 50px;
+      font-weight: 600;
+      margin: 0 auto 1rem auto;
+      box-shadow: 0 0 10px rgba(44, 62, 80, 0.7);
+      user-select: none;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
 
-  .step-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.1rem;
-  }
+    .step-info {
+      max-width: 180px;
+      margin: 0 auto;
+      background: #f9f9f9;
+      padding: 12px 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 0.9rem;
+      color: #34495e;
+      line-height: 1.4;
+      text-align: left;
 
-  .step-company {
-    font-style: italic;
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 0.5rem;
-  }
+      h4 {
+        margin: 0 0 4px 0;
+        font-weight: 700;
+        color: #2c3e50;
+        font-size: 1.1rem;
+      }
 
-  .step-description {
-    font-size: 0.9rem;
-    color: #666;
+      .institution-location {
+        font-style: italic;
+        color: #7f8c8d;
+        margin-bottom: 6px;
+        font-size: 0.85rem;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
   }
 }

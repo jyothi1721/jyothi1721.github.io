@@ -12,14 +12,13 @@ Welcome to my personal website! I'm a bioinformatics researcher passionate about
 
 ---
 
+<div class="row">
+  {% include about/timeline.html %}
+</div>
 
 <div class="row">
   <div class="col-12">
     <h2>💼 Skills</h2>
     {% include about/skills.html title="Skills" source=site.data.skills %}
   </div>
-</div>
-
-<div class="row">
-  {% include about/timeline.html %}
 </div>
